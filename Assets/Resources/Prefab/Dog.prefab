@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: bd1ca8c7f0eab9e438e483d83cd6c731, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 24d5183ee7488ee49a028da3f6ae8c64, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -97,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 7
   health: 100
+  amount: {fileID: 0}
 --- !u!136 &2273404853586927361
 CapsuleCollider:
   m_ObjectHideFlags: 0

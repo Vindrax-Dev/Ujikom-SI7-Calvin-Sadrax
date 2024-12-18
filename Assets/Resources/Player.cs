@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     //movemment
     public float movespeed=3;
-
+    public Animator animator;
     private CharacterController _controller;
 
     private float hInput;
@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public GameObject bullet;
 
     public Transform firepoint;
+
+    public GameObject SFXThrow;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
 
     public void Tembak()
     {
+        animator.SetTrigger("Shoot");
         Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 
@@ -42,5 +45,14 @@ public class Player : MonoBehaviour
         hInput = Input.GetAxisRaw("Horizontal");
         dir = transform.right * hInput;
         _controller.Move(dir.normalized * movespeed * Time.deltaTime);
+        if (hInput < 0)
+        {
+            animator.SetTrigger("kiri");
+        }
+        else if (hInput > 0)
+        {
+            animator.SetTrigger("kanan");
+        }
     }
+    
 }

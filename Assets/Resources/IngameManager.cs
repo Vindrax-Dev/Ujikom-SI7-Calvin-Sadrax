@@ -13,12 +13,13 @@ public class IngameManager : MonoBehaviour
     public float totalwaktu = 60f;
     public GameOver gameover;
     private float currenttime;
+    public AudioSource bgmInGame;
     
     // Start is called before the first frame update
     void Start()
     {
         currenttime = totalwaktu;
-        
+        bgmInGame.Play();
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class IngameManager : MonoBehaviour
         currenttime -= Time.deltaTime;
         UpdateTimerUI();
         UpdateScoreUI();
-        if (currenttime <= 0f)
+        if (currenttime < 0f)
         {
             gameover.ActiveGameOver();
         }

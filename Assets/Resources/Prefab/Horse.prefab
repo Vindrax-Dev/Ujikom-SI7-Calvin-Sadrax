@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horse
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4b3cf8353ced51148982cf721c363fb1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e4bcf069cb8298e4ca021b3acb1d412e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -147,3 +151,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 7
   health: 100
+  amount: {fileID: 0}
