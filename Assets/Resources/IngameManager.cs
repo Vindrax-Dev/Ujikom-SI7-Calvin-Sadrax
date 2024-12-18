@@ -11,10 +11,9 @@ public class IngameManager : MonoBehaviour
     public TextMeshProUGUI scoretext;
     public int score;
     public float totalwaktu = 60f;
-
+    public GameOver gameover;
     private float currenttime;
-
-    public bool isgameover = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +27,10 @@ public class IngameManager : MonoBehaviour
         currenttime -= Time.deltaTime;
         UpdateTimerUI();
         UpdateScoreUI();
+        if (currenttime <= 0f)
+        {
+            gameover.ActiveGameOver();
+        }
     }
 
     public void UpdateTimerUI()
