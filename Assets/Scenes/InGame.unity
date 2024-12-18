@@ -1711,7 +1711,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1377364681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1673249584}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: RetryGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1377364681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,8 +1864,8 @@ MonoBehaviour:
   timertext: {fileID: 209604815}
   scoretext: {fileID: 254499873}
   score: 0
-  totalwaktu: 60
-  isgameover: 0
+  totalwaktu: 10
+  gameover: {fileID: 1673249584}
 --- !u!4 &1463986995
 Transform:
   m_ObjectHideFlags: 0
@@ -2172,6 +2184,7 @@ GameObject:
   - component: {fileID: 1673249582}
   - component: {fileID: 1673249581}
   - component: {fileID: 1673249580}
+  - component: {fileID: 1673249584}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -2263,6 +2276,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1673249584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673249579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1a66d4dbe827640bd981f976fb32e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1766915686
 GameObject:
   m_ObjectHideFlags: 0
